@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
+import Friend from '@/components/icons/SeeMore';
+import CovidImg from '@img/Covid19.png';
+
 import { RootState, useAppDisPatch, useAppSelector } from '@/stores/store';
 import { changeTheme, ThemeState } from '@/features/theme/ThemeSlice';
-
-const Button = styled.button`
-    color: ${(props) => props.theme.text};
-    background: ${(props) => props.theme.background};
-`;
 
 export default function Header() {
     const dispatch = useAppDisPatch();
@@ -14,17 +12,8 @@ export default function Header() {
 
     return (
         <div>
-            <button
-                onClick={() =>
-                    dispatch(
-                        changeTheme(
-                            themeState.value === 'light' ? 'dark' : 'light'
-                        )
-                    )
-                }
-            >
-                Click
-            </button>
+            <Friend fill='red' />
+            <img src={CovidImg} alt="" />
         </div>
     );
 }
