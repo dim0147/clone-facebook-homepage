@@ -20,11 +20,12 @@ import {
   FaArrowLeft,
   FaCompactDisc,
   FaKeyboard,
+  FaStarAndCrescent,
 } from 'react-icons/fa';
 import Setting from './Setting';
 import HelpAndSupport from './HelpAndSupport';
 import Main from './Main';
-import KeyboardSetting from './KeyboardSetting';
+import DisplayAccessibility from './DisplayAccessibility';
 
 interface CheckboxLabelProps {
   isActive?: boolean;
@@ -42,8 +43,8 @@ const CheckboxSection = styled.div`
 `;
 
 const CheckboxContainer = styled.div`
-  border-radius: 10px;
-  padding: 15px 10px;
+  border-radius: 5px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -76,15 +77,11 @@ const ActionGoto = styled.div`
   padding-left: 5px;
 `;
 
-const DisplayAccessibility = () => {
+const KeyboardSetting = () => {
   const context = useContext(SettingContext);
 
   const onBack = () => {
-    if (context !== null) context(<Main />, 'from-left');
-  };
-
-  const onKeyboardSetting = () => {
-    context(<KeyboardSetting />, 'from-right');
+    if (context !== null) context(<DisplayAccessibility />, 'from-left');
   };
 
   return (
@@ -93,86 +90,48 @@ const DisplayAccessibility = () => {
         <NavigationIcon onClick={onBack}>
           <FaArrowLeft />
         </NavigationIcon>
-        <h2>Display & Accessibility</h2>
+        <h2>Keyboard</h2>
       </NavigationHeader>
 
-      <Action noBackground>
-        <ActionIcon noCenter>
-          <FaMoon />
-        </ActionIcon>
-
-        <ActionContent>
-          <p>Dark Mode</p>
-          <span>
-            Adjust the appearance of Facebook to reduce glare and give your eyes
-            a break.
-          </span>
-
-          <CheckboxSection>
-            <CheckboxContainer>
-              <h5>Off</h5>
-              <CheckboxLabel isActive>
-                <input type="checkbox" />
-                <div></div>
-              </CheckboxLabel>
-            </CheckboxContainer>
-
-            <CheckboxContainer>
-              <h5>On</h5>
-              <CheckboxLabel>
-                <input type="checkbox" />
-                <div></div>
-              </CheckboxLabel>
-            </CheckboxContainer>
-          </CheckboxSection>
-        </ActionContent>
-      </Action>
-
-      <Action noBackground>
-        <ActionIcon noCenter>
-          <FaCompactDisc />
-        </ActionIcon>
-
-        <ActionContent>
-          <p>Compact Mode</p>
-          <span>
-            Make your font size smaller so more content can fit on the screen.
-          </span>
-          <CheckboxSection>
-            <CheckboxContainer>
-              <h5>Off</h5>
-              <CheckboxLabel>
-                <input type="checkbox" />
-                <div></div>
-              </CheckboxLabel>
-            </CheckboxContainer>
-
-            <CheckboxContainer>
-              <h5>On</h5>
-              <CheckboxLabel isActive>
-                <input type="checkbox" />
-                <div></div>
-              </CheckboxLabel>
-            </CheckboxContainer>
-          </CheckboxSection>
-        </ActionContent>
-      </Action>
-
-      <Action onClick={onKeyboardSetting}>
+      <Action>
         <ActionIcon>
           <FaKeyboard />
         </ActionIcon>
 
         <ActionContent>
-          <p>Keyboard</p>
+          <p>See All Keyboard Shortcuts</p>
         </ActionContent>
+      </Action>
 
-        <ActionGoto>
-          <FaChevronRight />
-        </ActionGoto>
+      <Action noBackground>
+        <ActionIcon noCenter>
+          <FaStarAndCrescent />
+        </ActionIcon>
+
+        <ActionContent>
+          <p>Use Single-Character Keyboard Shortcuts</p>
+          <span>Use single-character shortcuts to perform common actions.</span>
+          <CheckboxSection>
+            <CheckboxContainer>
+              <h5>Off</h5>
+              <CheckboxLabel isActive>
+                <input type="checkbox" />
+                <div></div>
+              </CheckboxLabel>
+            </CheckboxContainer>
+
+            <CheckboxContainer>
+              <h5>On</h5>
+              <CheckboxLabel>
+                <input type="checkbox" />
+                <div></div>
+              </CheckboxLabel>
+            </CheckboxContainer>
+          </CheckboxSection>
+        </ActionContent>
       </Action>
     </Container>
   );
 };
 
-export default DisplayAccessibility;
+export default KeyboardSetting;

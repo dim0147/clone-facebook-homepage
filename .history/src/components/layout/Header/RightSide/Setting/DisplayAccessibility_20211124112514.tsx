@@ -42,8 +42,8 @@ const CheckboxSection = styled.div`
 `;
 
 const CheckboxContainer = styled.div`
-  border-radius: 10px;
-  padding: 15px 10px;
+  border-radius: 5px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;

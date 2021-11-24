@@ -9,8 +9,8 @@ interface ActionIconProps {
 }
 
 export const Action = styled.div`
-  border-radius: 10px;
-  padding: 10px;
+border-radius: 10px;
+  padding: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
   cursor: ${(props: ActionProps) => (props.noBackground ? 'unset' : 'pointer')};
