@@ -12,7 +12,6 @@ const Container = styled.div`
   display: flex;
   position: sticky;
   top: 0;
-  height: 60px;
 `;
 
 

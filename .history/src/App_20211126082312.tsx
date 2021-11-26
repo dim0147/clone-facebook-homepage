@@ -5,7 +5,7 @@ import ThemeProvider from '@/providers/ThemeProvider';
 const App = () => (
   <ThemeProvider>
     <Header />
-    <Screen />
+    <Screen></Screen>
   </ThemeProvider>
 );
 

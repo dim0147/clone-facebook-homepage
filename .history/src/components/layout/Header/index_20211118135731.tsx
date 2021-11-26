@@ -10,9 +10,7 @@ const Container = styled.div`
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.text};
   display: flex;
-  position: sticky;
-  top: 0;
-  height: 60px;
+  margin-bottom: 10px;
 `;
 
 
