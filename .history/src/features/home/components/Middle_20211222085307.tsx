@@ -6,8 +6,7 @@ const Container = styled.div`
   max-width: 800px;
   justify-self: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 `;
 
 export const Middle = () => {

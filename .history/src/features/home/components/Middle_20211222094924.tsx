@@ -14,6 +14,7 @@ export const Middle = () => {
   return (
     <Container>
       <StoryContainer />
+      <h1>cmn?</h1>
     </Container>
   );
 };

@@ -7,7 +7,7 @@ const MainGrid = styled.div`
     display: grid;
     grid-template-columns: 360px 1fr 360px;
     background-color: #F0F2F5;
-    height: calc(100vh - 60px);
+    height: 100vh;
 `;
 
 export const Screen = () => {

@@ -220,7 +220,7 @@ export const Left = () => {
           <p> {expand ? 'See less' : 'See more'}</p>
         </Action>
 
-        <Divider style={{ borderWidth: 2, marginTop: 5 }} />
+        <Divider style={{ borderWidth: 2, marginTop: 5px }} />
 
         <ShortCutSection>
           <ShortCutHeader>

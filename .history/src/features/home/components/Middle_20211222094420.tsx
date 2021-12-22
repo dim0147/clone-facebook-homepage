@@ -4,10 +4,10 @@ import { StoryContainer } from './Middle/StoryContainer';
 const Container = styled.div`
   min-width: 744px;
   max-width: 800px;
+  height: auto;
   justify-self: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 `;
 
 export const Middle = () => {
