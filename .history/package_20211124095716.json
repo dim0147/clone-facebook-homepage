@@ -4,7 +4,6 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "buildgithub": "tsc && vite build --base=https://dim0147.github.io/clone-facebook-homepage/build/",
         "serve": "vite preview"
     },
     "dependencies": {
@@ -41,6 +40,5 @@
             "react-app",
             "react-app/jest"
         ]
-    },
-    "homepage": "http://dim0147.github.io/clone-facebook-homepage/build"
+    }
 }
